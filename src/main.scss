@@ -1,0 +1,82 @@
+@import 'reset.scss';
+@import 'colors.scss';
+@import 'fonts.scss';
+
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: $primary-cream;
+}
+
+.product {
+    background-color: $accent-white;
+    font-family: 'Montserrat', serif;
+    color: $accent-grayish-blue;
+    font-size: 0.875rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+
+    @media screen and (min-width: 600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+.product__content {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+
+    @media screen and (min-width: 600px) {
+        padding: 1rem;
+    }
+}
+
+.product__type {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.product__title {
+    font-size: 2rem;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    line-height: 1.8rem;
+    color:$accent-dark-blue
+}
+
+.product-price-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.discounted-price {
+    font-size: 2rem;
+    font-family: 'Fraunces', sans-serif;
+    color: $primary-cyan
+}
+
+.button {
+    display: inline-flex;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    background-color: $primary-cyan;
+    color: $accent-white;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2.25rem;
+    align-items: center;
+}
+
+.button::before {
+    content: "";
+    background: url(/images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}
+
